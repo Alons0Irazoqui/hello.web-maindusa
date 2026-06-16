@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MAINDUSA – Mantenimiento Industrial Arevalo. Soldadura industrial, mantenimiento mecánico, instalaciones y más. Servicio profesional en Guadalajara, Jalisco." />
+  <meta name="keywords" content="mantenimiento industrial Guadalajara, soldadura industrial Jalisco, MAINDUSA, mantenimiento de maquinaria, instalaciones industriales, Abraham Arevalo" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="MAINDUSA – Mantenimiento Industrial Arevalo" />
+  <meta property="og:description" content="Servicios de mantenimiento industrial, soldadura y más. Calidad, experiencia y confianza en Guadalajara." />
+  <meta property="og:type" content="website" />
+  <title>MAINDUSA – Mantenimiento Industrial Arevalo | Guadalajara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:    { DEFAULT: '#050d1a', 800: '#0d1f3c', 700: '#112747', 600: '#163354' },
+            orange:  { DEFAULT: '#f97316', light: '#fb923c', dark: '#ea6d07' },
+            silver:  { DEFAULT: '#c8d4e8', dark: '#8a9ab8' },
+            gold:    { DEFAULT: '#d4a843', light: '#e8c46a' },
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-navy text-silver font-body overflow-x-hidden">
+
+  <!-- ========== LOADER PREMIUM ========== -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-glow-bg"></div>
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <div class="loader-ring-outer"></div>
+        <div class="loader-ring-inner"></div>
+        <div class="loader-logo-img">
+          <img src="imagenes/maindusa_logo_transparente_alta_calidad.png" alt="" />
+        </div>
+      </div>
+      <div class="loader-brand-wrap">
+        <p class="loader-name">MAINDUSA</p>
+        <p class="loader-sub">Mantenimiento Industrial Arevalo</p>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="logo-mark w-10 h-10 flex items-center justify-center">
+          <img src="imagenes/maindusa_logo_transparente_alta_calidad.png" alt="MAINDUSA logo" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <span class="block font-heading font-900 text-lg leading-none text-white group-hover:text-gold transition-colors">MAINDUSA</span>
+          <span class="block text-xs text-silver-dark leading-none">Mant. Industrial Arevalo</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex items-center gap-8 font-heading font-600 text-sm">
+        <li><a href="#inicio"    class="nav-link text-silver hover:text-orange transition-colors">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link text-silver hover:text-orange transition-colors">Servicios</a></li>
+        <li><a href="#beneficios"class="nav-link text-silver hover:text-orange transition-colors">Nosotros</a></li>
+        <li><a href="#proceso"   class="nav-link text-silver hover:text-orange transition-colors">Proceso</a></li>
+        <li><a href="#contacto"  class="nav-link text-silver hover:text-orange transition-colors">Contacto</a></li>
+      </ul>
+
+      <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20cotizar%20un%20servicio" target="_blank"
+         class="hidden md:inline-flex items-center gap-2 btn-primary font-heading font-700 text-sm px-5 py-2.5 rounded-full">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.855L0 24l6.335-1.502A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.742-.522-5.29-1.432l-.379-.225-3.763.892.923-3.667-.247-.389A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Cotizar Ahora
+      </a>
+
+      <!-- Hamburger -->
+      <button id="menuBtn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menú">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden px-4 pb-4 hidden">
+      <ul class="flex flex-col gap-4 font-heading font-600 text-sm">
+        <li><a href="#inicio"     class="mobile-nav-link">Inicio</a></li>
+        <li><a href="#servicios"  class="mobile-nav-link">Servicios</a></li>
+        <li><a href="#beneficios" class="mobile-nav-link">Nosotros</a></li>
+        <li><a href="#proceso"    class="mobile-nav-link">Proceso</a></li>
+        <li><a href="#contacto"   class="mobile-nav-link">Contacto</a></li>
+        <li>
+          <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20cotizar%20un%20servicio" target="_blank"
+             class="btn-primary inline-flex items-center gap-2 font-700 text-sm px-5 py-3 rounded-full w-full justify-center">
+            Cotizar por WhatsApp
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section id="inicio" class="hero-section relative min-h-screen flex items-center overflow-hidden">
+
+      <!-- Canvas de partículas bokeh premium -->
+      <canvas id="sparkCanvas" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:3;"></canvas>
+
+      <!-- Fondo con capas de profundidad -->
+      <div class="hero-bg-layer-1 absolute inset-0 z-0"></div>
+      <div class="hero-bg-layer-2 absolute inset-0 z-0"></div>
+      <div class="hero-glow-left  absolute left-0 top-1/2 -translate-y-1/2 z-0"></div>
+      <div class="hero-glow-right absolute right-0 bottom-0 z-0"></div>
+
+      <!-- Grid decorativo -->
+      <div class="hero-grid absolute inset-0 z-0 opacity-10"></div>
+
+      <!-- Orbs bokeh: puntos de luz flotantes animados -->
+      <div class="hero-bokeh-wrap" id="heroBokeh"></div>
+
+      <!-- Contenido principal -->
+      <div class="container mx-auto px-4 md:px-8 pt-36 pb-24 relative z-10">
+        <div class="flex flex-col items-center">
+
+          <!-- Contenido centrado -->
+          <div class="hero-content text-center max-w-4xl w-full">
+            <!-- Badge de confianza -->
+            <div id="hero-badge" class="inline-flex items-center gap-2 badge-trust mb-8 opacity-0 mx-auto">
+              <span class="badge-dot"></span>
+              <span class="text-xs font-heading font-700 text-gold uppercase tracking-widest">+15 años de experiencia industrial</span>
+            </div>
+
+            <!-- Título principal -->
+            <h1 id="hero-title" class="font-heading font-900 text-5xl md:text-6xl xl:text-8xl leading-none mb-8 opacity-0" style="letter-spacing:-0.02em;">
+              <span class="text-white">Expertos en</span><br/>
+              <span class="text-gradient-metal">Mantenimiento</span><br/>
+              <span class="text-white">Industrial</span>
+            </h1>
+
+            <!-- Subtítulo -->
+            <p id="hero-subtitle" class="text-silver-dark text-lg md:text-xl leading-relaxed mb-8 max-w-lg opacity-0 mx-auto">
+              Soldadura de precisión, mantenimiento mecánico y eléctrico, instalaciones industriales.
+              <strong class="text-silver">Calidad, seguridad y puntualidad</strong> garantizadas en cada proyecto.
+            </p>
+
+            <!-- CTAs -->
+            <div id="hero-ctas" class="flex flex-wrap gap-4 mb-10 opacity-0 justify-center">
+              <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20cotizar%20un%20servicio%20de%20mantenimiento%20industrial"
+                 target="_blank"
+                 class="btn-primary inline-flex items-center gap-3 font-heading font-700 text-base px-8 py-4 rounded-full group">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.855L0 24l6.335-1.502A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.742-.522-5.29-1.432l-.379-.225-3.763.892.923-3.667-.247-.389A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                Solicitar Cotización
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#servicios"
+                 class="btn-secondary inline-flex items-center gap-3 font-heading font-700 text-base px-8 py-4 rounded-full">
+                Ver Servicios
+              </a>
+            </div>
+
+            <!-- Métricas rápidas -->
+            <div id="hero-stats" class="flex flex-wrap gap-6 opacity-0 justify-center">
+              <div class="stat-item">
+                <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Años de experiencia</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Proyectos completados</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+                <span class="stat-label">Clientes satisfechos</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /flex -->
+
+
+        <!-- Scroll indicator -->
+        <div id="scroll-indicator" class="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 flex flex-col items-center gap-2">
+          <span class="text-xs text-silver-dark font-heading font-600 tracking-widest uppercase">Explorar</span>
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section id="servicios" class="py-24 relative overflow-hidden">
+      <div class="section-bg-accent section-bg-accent--right"></div>
+
+      <div class="container mx-auto px-4 md:px-8">
+        <!-- Header de sección -->
+        <div class="text-center mb-16 reveal-up">
+          <span class="section-eyebrow">Nuestros Servicios</span>
+          <h2 class="section-title mt-3">
+            Soluciones Industriales<br/>
+            <span class="text-gradient-orange">de Alta Precisión</span>
+          </h2>
+          <p class="section-subtitle">
+            Contamos con el equipo, la experiencia y la tecnología para resolver<br class="hidden md:block"/>
+            cualquier desafío de mantenimiento en tu planta o instalación.
+          </p>
+        </div>
+
+        <!-- Grid de servicios -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="service-card reveal-card">
+            <div class="service-icon-wrap bg-orange/10">
+              <svg class="service-icon text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Soldadura Industrial</h3>
+            <p class="service-desc">Soldadura MIG, TIG, arco eléctrico y oxiacetilénica. Uniones de alta resistencia en acero, aluminio y acero inoxidable para estructuras y tuberías industriales.</p>
+            <ul class="service-list">
+              <li>Soldadura de tuberías a presión</li>
+              <li>Reparación de estructuras metálicas</li>
+              <li>Fabricación de piezas a medida</li>
+            </ul>
+            <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Soldadura%20Industrial" target="_blank" class="service-cta">
+              Solicitar servicio
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="service-card reveal-card">
+            <div class="service-icon-wrap bg-black/20">
+              <svg class="service-icon text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Mantenimiento Mecánico</h3>
+            <p class="service-desc">Diagnóstico, reparación y mantenimiento preventivo y correctivo de maquinaria industrial. Prolongamos la vida útil de tus equipos y reducimos tiempos de paro.</p>
+            <ul class="service-list">
+              <li>Mantenimiento preventivo programado</li>
+              <li>Reparación de maquinaria pesada</li>
+              <li>Alineación y balanceo de equipos</li>
+            </ul>
+            <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Mantenimiento%20Mec%C3%A1nico" target="_blank" class="service-cta">
+              Solicitar servicio
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="service-card reveal-card">
+            <div class="service-icon-wrap bg-yellow-500/10">
+              <svg class="service-icon text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Instalaciones Eléctricas</h3>
+            <p class="service-desc">Diseño, instalación y mantenimiento de sistemas eléctricos industriales de baja y media tensión. Cumplimiento con la normativa NOM vigente y estándares de seguridad.</p>
+            <ul class="service-list">
+              <li>Tableros de control y distribución</li>
+              <li>Cableado y canalización industrial</li>
+              <li>Sistemas de emergencia y UPS</li>
+            </ul>
+            <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Instalaciones%20El%C3%A9ctricas" target="_blank" class="service-cta">
+              Solicitar servicio
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="service-card reveal-card">
+            <div class="service-icon-wrap bg-black/20">
+              <svg class="service-icon text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Instalación de Tuberías</h3>
+            <p class="service-desc">Instalación y mantenimiento de sistemas de tuberías industriales para agua, vapor, aire comprimido, gas y fluidos de proceso. Sellados de alta presión garantizados.</p>
+            <ul class="service-list">
+              <li>Tubería hidráulica y neumática</li>
+              <li>Sistemas de vapor y condensado</li>
+              <li>Redes de aire comprimido</li>
+            </ul>
+            <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Instalaci%C3%B3n%20de%20Tuber%C3%ADas" target="_blank" class="service-cta">
+              Solicitar servicio
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="service-card reveal-card">
+            <div class="service-icon-wrap bg-purple-500/10">
+              <svg class="service-icon text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Estructuras Metálicas</h3>
+            <p class="service-desc">Fabricación e instalación de estructuras metálicas para naves industriales, plataformas, escaleras, mezzanines y equipos de soporte con cálculo estructural.</p>
+            <ul class="service-list">
+              <li>Naves y techados industriales</li>
+              <li>Plataformas y mezzanines</li>
+              <li>Escaleras y barandales</li>
+            </ul>
+            <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Estructuras%20Met%C3%A1licas" target="_blank" class="service-cta">
+              Solicitar servicio
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="service-card reveal-card">
+            <div class="service-icon-wrap bg-green-500/10">
+              <svg class="service-icon text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Proyectos Llave en Mano</h3>
+            <p class="service-desc">Gestión integral de proyectos industriales desde el diseño hasta la puesta en marcha. Una sola empresa, un solo responsable, un solo punto de contacto para toda la obra.</p>
+            <ul class="service-list">
+              <li>Planeación y gestión de proyecto</li>
+              <li>Coordinación multidisciplinaria</li>
+              <li>Entrega con garantía total</li>
+            </ul>
+            <a href="https://wa.me/523333882211?text=Hola%2C%20me%20interesa%20un%20Proyecto%20Llave%20en%20Mano" target="_blank" class="service-cta">
+              Solicitar servicio
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+        </div><!-- /grid -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- ========== BENEFICIOS ========== -->
+    <section id="beneficios" class="py-24 bg-navy-800 relative overflow-hidden">
+      <div class="section-bg-accent section-bg-accent--left"></div>
+
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Texto -->
+          <div class="reveal-up">
+            <span class="section-eyebrow">¿Por qué MAINDUSA?</span>
+            <h2 class="section-title mt-3">
+              La diferencia que<br/>
+              <span class="text-gradient-orange">marca resultados</span>
+            </h2>
+            <p class="section-subtitle text-left">
+              Más de 15 años resolviendo los desafíos de mantenimiento industrial más complejos en Jalisco y el Bajío. Nuestro equipo técnico especializado trabaja con un solo objetivo: que tu planta nunca se detenga.
+            </p>
+            <div class="mt-8 flex flex-col gap-4">
+              <div class="benefit-highlight">
+                <div class="benefit-check">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Técnicos certificados y con experiencia comprobada</span>
+              </div>
+              <div class="benefit-highlight">
+                <div class="benefit-check">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Equipamiento industrial de última generación</span>
+              </div>
+              <div class="benefit-highlight">
+                <div class="benefit-check">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Cumplimiento con normas de seguridad e higiene industrial</span>
+              </div>
+              <div class="benefit-highlight">
+                <div class="benefit-check">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Presupuestos claros sin costos ocultos</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/523333882211?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20MAINDUSA" target="_blank"
+               class="btn-primary inline-flex items-center gap-3 font-heading font-700 text-base px-8 py-4 rounded-full mt-8">
+              Hablar con un especialista
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Tarjetas de beneficios -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="benefit-card reveal-card">
+              <div class="benefit-icon text-orange">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="benefit-card-title">Respuesta Inmediata</h4>
+              <p class="benefit-card-desc">Tiempo de respuesta menor a 2 horas en emergencias industriales.</p>
+            </div>
+
+            <div class="benefit-card reveal-card">
+              <div class="benefit-icon text-gold">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <h4 class="benefit-card-title">Calidad Garantizada</h4>
+              <p class="benefit-card-desc">Garantía en materiales y mano de obra en todos nuestros trabajos.</p>
+            </div>
+
+            <div class="benefit-card reveal-card">
+              <div class="benefit-icon text-blue-400">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <h4 class="benefit-card-title">Equipo Experto</h4>
+              <p class="benefit-card-desc">Personal técnico con certificaciones y años de experiencia en campo.</p>
+            </div>
+
+            <div class="benefit-card reveal-card">
+              <div class="benefit-icon text-green-400">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="benefit-card-title">Precio Justo</h4>
+              <p class="benefit-card-desc">Cotizaciones transparentes y competitivas sin letras pequeñas.</p>
+            </div>
+
+            <div class="benefit-card reveal-card">
+              <div class="benefit-icon text-purple-400">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+              </div>
+              <h4 class="benefit-card-title">Amplia Cobertura</h4>
+              <p class="benefit-card-desc">Atendemos toda la Zona Metropolitana de Guadalajara y el Bajío.</p>
+            </div>
+
+            <div class="benefit-card reveal-card">
+              <div class="benefit-icon text-cyan-400">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+              </div>
+              <h4 class="benefit-card-title">Servicio 24/7</h4>
+              <p class="benefit-card-desc">Disponibles todo el día, todos los días para atender emergencias.</p>
+            </div>
+          </div>
+
+        </div><!-- /grid -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- ========== PROCESO ========== -->
+    <section id="proceso" class="py-24 relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8">
+
+        <div class="text-center mb-16 reveal-up">
+          <span class="section-eyebrow">Cómo Trabajamos</span>
+          <h2 class="section-title mt-3">
+            Un proceso simple y<br/>
+            <span class="text-gradient-orange">completamente transparente</span>
+          </h2>
+        </div>
+
+        <!-- Steps -->
+        <div class="process-timeline">
+          <div class="process-line"></div>
+
+          <div class="grid md:grid-cols-5 gap-6">
+
+            <div class="process-step reveal-card">
+              <div class="process-number">01</div>
+              <div class="process-icon-wrap">
+                <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+              </div>
+              <h4 class="process-title">Contacto</h4>
+              <p class="process-desc">Nos contactas por WhatsApp, teléfono o correo. Atendemos de inmediato.</p>
+            </div>
+
+            <div class="process-step reveal-card">
+              <div class="process-number">02</div>
+              <div class="process-icon-wrap">
+                <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+              </div>
+              <h4 class="process-title">Diagnóstico</h4>
+              <p class="process-desc">Visita técnica sin costo para evaluar el alcance real del trabajo.</p>
+            </div>
+
+            <div class="process-step reveal-card">
+              <div class="process-number">03</div>
+              <div class="process-icon-wrap">
+                <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                </svg>
+              </div>
+              <h4 class="process-title">Cotización</h4>
+              <p class="process-desc">Presupuesto detallado y claro en menos de 24 horas. Sin sorpresas.</p>
+            </div>
+
+            <div class="process-step reveal-card">
+              <div class="process-number">04</div>
+              <div class="process-icon-wrap">
+                <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                </svg>
+              </div>
+              <h4 class="process-title">Ejecución</h4>
+              <p class="process-desc">Nuestro equipo ejecuta el trabajo con los más altos estándares de calidad.</p>
+            </div>
+
+            <div class="process-step reveal-card">
+              <div class="process-number">05</div>
+              <div class="process-icon-wrap">
+                <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <h4 class="process-title">Seguimiento</h4>
+              <p class="process-desc">Garantía post-servicio y seguimiento para asegurar tu satisfacción total.</p>
+            </div>
+
+          </div><!-- /grid -->
+        </div><!-- /process-timeline -->
+
+      </div><!-- /container -->
+    </section>
+
+    <!-- ========== SECCIÓN VISUAL DESTACADA (CTA BLOCK) ========== -->
+    <section class="py-24 relative overflow-hidden cta-block">
+      <div class="cta-bg"></div>
+      <div class="cta-grid"></div>
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto text-center reveal-up">
+          <div class="inline-flex items-center gap-2 badge-trust mb-6">
+            <span class="badge-dot"></span>
+            <span class="text-xs font-heading font-700 text-gold uppercase tracking-widest">Servicio Industrial Premium</span>
+          </div>
+          <h2 class="font-heading font-900 text-3xl md:text-5xl text-white leading-tight mb-6">
+            ¿Tu maquinaria necesita<br/>
+            <span class="text-gradient-orange">atención urgente?</span>
+          </h2>
+          <p class="text-silver-dark text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+            No dejes que una falla detenga tu producción. El equipo de MAINDUSA está disponible ahora mismo para atenderte.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="https://wa.me/523333882211?text=Hola%2C%20tengo%20una%20emergencia%20industrial%20y%20necesito%20ayuda%20urgente"
+               target="_blank"
+               class="btn-primary inline-flex items-center gap-3 font-heading font-700 text-lg px-10 py-5 rounded-full group">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.855L0 24l6.335-1.502A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.742-.522-5.29-1.432l-.379-.225-3.763.892.923-3.667-.247-.389A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Atención de Emergencia
+            </a>
+            <a href="tel:3333882211"
+               class="btn-secondary inline-flex items-center gap-3 font-heading font-700 text-lg px-10 py-5 rounded-full">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              333 388 22 11
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="py-24 bg-navy-800 relative overflow-hidden">
+      <div class="section-bg-accent section-bg-accent--right"></div>
+
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16 reveal-up">
+          <span class="section-eyebrow">Contacto</span>
+          <h2 class="section-title mt-3">
+            Cuéntanos tu proyecto,<br/>
+            <span class="text-gradient-orange">te respondemos hoy</span>
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+
+          <!-- Formulario -->
+          <div class="contact-form-wrap reveal-up">
+            <form id="contactForm" class="flex flex-col gap-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div class="form-group">
+                  <label class="form-label">Nombre completo</label>
+                  <input type="text" name="nombre" placeholder="Tu nombre" class="form-input" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Empresa</label>
+                  <input type="text" name="empresa" placeholder="Nombre de tu empresa" class="form-input" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div class="form-group">
+                  <label class="form-label">Teléfono</label>
+                  <input type="tel" name="telefono" placeholder="Tu número de contacto" class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Correo electrónico</label>
+                  <input type="email" name="correo" placeholder="tu@correo.com" class="form-input" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Tipo de servicio</label>
+                <select name="servicio" class="form-input">
+                  <option value="">Selecciona un servicio...</option>
+                  <option>Soldadura Industrial</option>
+                  <option>Mantenimiento Mecánico</option>
+                  <option>Instalaciones Eléctricas</option>
+                  <option>Instalación de Tuberías</option>
+                  <option>Estructuras Metálicas</option>
+                  <option>Proyecto Llave en Mano</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Descripción del proyecto</label>
+                <textarea name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué necesitas..." class="form-input resize-none"></textarea>
+              </div>
+              <button type="submit" class="btn-primary font-heading font-700 text-base py-4 rounded-full flex items-center justify-center gap-3 group">
+                Enviar mensaje por WhatsApp
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Info de contacto + Mapa -->
+          <div class="flex flex-col gap-8 reveal-up">
+
+            <!-- Datos de contacto -->
+            <div class="flex flex-col gap-4">
+              <a href="tel:3333882211" class="contact-info-card">
+                <div class="contact-info-icon bg-orange/20 text-orange">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-silver-dark font-heading font-600 uppercase tracking-wide mb-0.5">Teléfono / WhatsApp</p>
+                  <p class="text-white font-heading font-700 text-lg">333 388 22 11</p>
+                  <p class="text-silver-dark text-sm">Abraham Arevalo</p>
+                </div>
+              </a>
+
+              <a href="mailto:arevalo.abr@gmail.com" class="contact-info-card">
+                <div class="contact-info-icon bg-gold/20 text-gold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-silver-dark font-heading font-600 uppercase tracking-wide mb-0.5">Correo electrónico</p>
+                  <p class="text-white font-heading font-700 text-lg">arevalo.abr@gmail.com</p>
+                </div>
+              </a>
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon bg-black/20 text-blue-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-silver-dark font-heading font-600 uppercase tracking-wide mb-0.5">Horarios de Atención</p>
+                  <p class="text-white font-heading font-700">Lunes a Sábado: 7am – 9pm</p>
+                  <p class="text-silver-dark text-sm">Emergencias 24/7 disponibles</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119798.43565!2d-103.4318!3d20.6597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b18cb52fd39b%3A0xd63d9302bf865750!2sGuadalajara%2C%20Jalisco!5e0!3m2!1ses!2smx!4v1234567890"
+                class="w-full h-full border-0"
+                allowfullscreen=""
+                loading="lazy"
+                title="Ubicación MAINDUSA – Guadalajara, Jalisco">
+              </iframe>
+            </div>
+
+          </div><!-- /contact right -->
+        </div><!-- /grid -->
+      </div><!-- /container -->
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer pt-16 pb-8">
+    <div class="container mx-auto px-4 md:px-8">
+
+      <div class="grid md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Branding -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="logo-mark w-10 h-10 flex items-center justify-center">
+              <img src="imagenes/maindusa_logo_transparente_alta_calidad.png" alt="MAINDUSA logo" class="w-full h-full object-contain" />
+            </div>
+            <div>
+              <p class="font-heading font-900 text-lg text-white leading-none">MAINDUSA</p>
+              <p class="text-xs text-silver-dark leading-none">Mant. Industrial Arevalo</p>
+            </div>
+          </div>
+          <p class="text-silver-dark text-sm leading-relaxed">
+            Expertos en mantenimiento industrial, soldadura y proyectos llave en mano. Guadalajara, Jalisco.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h5 class="font-heading font-700 text-white mb-4 text-sm uppercase tracking-wide">Servicios</h5>
+          <ul class="flex flex-col gap-2 text-sm text-silver-dark">
+            <li><a href="#servicios" class="hover:text-orange transition-colors">Soldadura Industrial</a></li>
+            <li><a href="#servicios" class="hover:text-orange transition-colors">Mantenimiento Mecánico</a></li>
+            <li><a href="#servicios" class="hover:text-orange transition-colors">Instalaciones Eléctricas</a></li>
+            <li><a href="#servicios" class="hover:text-orange transition-colors">Instalación de Tuberías</a></li>
+            <li><a href="#servicios" class="hover:text-orange transition-colors">Estructuras Metálicas</a></li>
+            <li><a href="#servicios" class="hover:text-orange transition-colors">Proyectos Llave en Mano</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+          <h5 class="font-heading font-700 text-white mb-4 text-sm uppercase tracking-wide">Contacto</h5>
+          <ul class="flex flex-col gap-3 text-sm text-silver-dark">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <a href="tel:3333882211" class="hover:text-orange transition-colors">333 388 22 11</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:arevalo.abr@gmail.com" class="hover:text-orange transition-colors">arevalo.abr@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Guadalajara, Jalisco, México</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-silver-dark text-sm">© 2024 MAINDUSA – Mantenimiento Industrial Arevalo. Todos los derechos reservados.</p>
+        <p class="text-silver-dark text-xs">Desarrollado con tecnología web premium</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========== BOTÓN FLOTANTE WHATSAPP ========== -->
+  <a href="https://wa.me/523333882211?text=Hola%20MAINDUSA%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios"
+     target="_blank"
+     id="whatsappFloat"
+     class="whatsapp-float"
+     aria-label="Contactar por WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <svg class="w-7 h-7 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.855L0 24l6.335-1.502A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.742-.522-5.29-1.432l-.379-.225-3.763.892.923-3.667-.247-.389A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    <span class="whatsapp-label">¡Escríbenos!</span>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
