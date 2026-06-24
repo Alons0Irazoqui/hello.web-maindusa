@@ -511,6 +511,184 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
 });
 
 /* ============================================================
+   GALERÍA DE TRABAJOS + LIGHTBOX
+   ============================================================ */
+(function initGallery() {
+  const images = [
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.44 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.44 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.44 PM (2).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.44 PM (3).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.44 PM (4).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.44 PM (5).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.45 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.45 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.45 PM (2).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.46 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.46 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.47 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.47 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.48 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.49 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.49 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.49 PM (2).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.50 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.50 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.51 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.51 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.54 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.55 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.58 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.58 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.59 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.00.59 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.01.00 PM.jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.01.00 PM (1).jpeg',
+    'imagenes/WhatsApp Image 2026-06-24 at 3.01.00 PM (2).jpeg',
+  ];
+
+  const grid     = document.getElementById('trabajos-grid');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lightbox-img');
+  const lbCurrent= document.getElementById('lightbox-current');
+  const lbTotal  = document.getElementById('lightbox-total');
+  const btnClose = document.getElementById('lightbox-close');
+  const btnPrev  = document.getElementById('lightbox-prev');
+  const btnNext  = document.getElementById('lightbox-next');
+
+  if (!grid || !lightbox) return;
+
+  function getInitialCount() {
+    if (window.matchMedia('(min-width: 1024px)').matches) return 12; // 4 cols × 3 rows
+    if (window.matchMedia('(min-width: 640px)').matches)  return 9;  // 3 cols × 3 rows
+    return 6;                                                          // 2 cols × 3 rows
+  }
+
+  const initialCount = getInitialCount();
+  let currentIdx = 0;
+  lbTotal.textContent = images.length;
+
+  images.forEach((src, i) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item reveal-card' + (i >= initialCount ? ' gallery-item--hidden' : '');
+    item.innerHTML = `
+      <img src="${src}" alt="Trabajo MAINDUSA ${i + 1}" loading="lazy" />
+      <div class="gallery-item-overlay">
+        <svg width="36" height="36" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+        </svg>
+      </div>
+    `;
+    item.addEventListener('click', () => openLightbox(i));
+    grid.appendChild(item);
+  });
+
+  // Botón "Ver más"
+  const verMasWrap = document.createElement('div');
+  verMasWrap.className = 'gallery-ver-mas-wrap';
+  const btnVerMas = document.createElement('button');
+  btnVerMas.className = 'gallery-ver-mas';
+  btnVerMas.innerHTML = `
+    Ver más trabajos
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  `;
+  verMasWrap.appendChild(btnVerMas);
+  grid.parentElement.appendChild(verMasWrap);
+
+  const btnVerMenos = document.createElement('button');
+  btnVerMenos.className = 'gallery-ver-mas gallery-ver-menos';
+  btnVerMenos.style.display = 'none';
+  btnVerMenos.innerHTML = `
+    Ver menos
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+  `;
+  verMasWrap.appendChild(btnVerMenos);
+
+  btnVerMas.addEventListener('click', () => {
+    grid.querySelectorAll('.gallery-item--hidden').forEach(el => {
+      el.classList.remove('gallery-item--hidden');
+      el.classList.add('visible');
+    });
+    btnVerMas.style.display = 'none';
+    btnVerMenos.style.display = 'inline-flex';
+  });
+
+  btnVerMenos.addEventListener('click', () => {
+    const allItems = grid.querySelectorAll('.gallery-item');
+    allItems.forEach((el, i) => {
+      if (i >= initialCount) {
+        el.classList.add('gallery-item--hidden');
+        el.classList.remove('visible');
+      }
+    });
+    btnVerMenos.style.display = 'none';
+    btnVerMas.style.display = 'inline-flex';
+    document.getElementById('trabajos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px 60px 0px' });
+  grid.querySelectorAll('.gallery-item:not(.gallery-item--hidden)').forEach(el => revealObs.observe(el));
+
+  function openLightbox(index) {
+    currentIdx = index;
+    lbImg.src = images[currentIdx];
+    lbCurrent.textContent = currentIdx + 1;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(() => { lbImg.src = ''; }, 300);
+  }
+
+  function showPrev() {
+    currentIdx = (currentIdx - 1 + images.length) % images.length;
+    lbImg.style.opacity = '0';
+    setTimeout(() => {
+      lbImg.src = images[currentIdx];
+      lbCurrent.textContent = currentIdx + 1;
+      lbImg.style.opacity = '1';
+    }, 180);
+  }
+
+  function showNext() {
+    currentIdx = (currentIdx + 1) % images.length;
+    lbImg.style.opacity = '0';
+    setTimeout(() => {
+      lbImg.src = images[currentIdx];
+      lbCurrent.textContent = currentIdx + 1;
+      lbImg.style.opacity = '1';
+    }, 180);
+  }
+
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', showPrev);
+  btnNext.addEventListener('click', showNext);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+})();
+
+/* ============================================================
    SMOOTH SCROLL EN LINKS INTERNOS
    ============================================================ */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
